@@ -11,7 +11,7 @@ export const ORMConfig: PostgresConnectionOptions = {
 	password   : POSTRGRES_PASSWORD,
 	database   : POSTRGRES_DATABASE,
 	logger: new CustomLogger(),
-	logging: ['query', 'error'],
+	logging: ['query', 'error', 'schema'],
 	entities: [
 		'src/models/**/entity/**/!(*.test.ts)',
 		'src/models/**/entity/**/!(*.spec.ts)',

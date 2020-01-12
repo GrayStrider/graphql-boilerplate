@@ -23,6 +23,7 @@ export const NODE_ENV = process.env.NODE_ENV
 export const routes = () => {
 	const base = `http://${HOST}:${PORT}/`
 	return {
-		users: base + 'users'
+		users: base + 'users',
+		plain: base + 'plain'
 	}
 }
