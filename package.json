@@ -22,7 +22,8 @@
     "type-graphql": "^0.16.0",
     "typeorm": "^0.2.11",
     "typescript": "^3.7.4",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "snyk": "^1.278.1"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -39,7 +40,7 @@
     "@types/nodemailer": "^4.6.5",
     "@types/uuid": "^3.4.4",
     "faker": "^4.1.0",
-    "jest": "^23.6.0",
+    "jest": "^24.0.0",
     "nodemon": "^1.18.9",
     "ts-jest": "^23.10.5",
     "ts-node": "^7.0.1",
@@ -48,6 +49,9 @@
   "scripts": {
     "start": "ts-node-dev --respawn src/index.ts",
     "db:setup": "ts-node ./src/test-utils/setup.ts",
-    "test": "npm run db:setup && jest"
-  }
+    "test": "npm run db:setup && jest",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
+  },
+  "snyk": true
 }
