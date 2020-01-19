@@ -14,7 +14,6 @@
     ":prConcurrentLimit20",
     "group:monorepos",
     "group:recommended",
-
     "helpers:disableTypesNodeMajor"
   ]
 }
