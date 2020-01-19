@@ -111,7 +111,7 @@
     "tsdef": "^0.0.13"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production ts-node --transpileOnly -r tsconfig-paths/register src/index.ts ",
+    "start": "cross-evbnv NODE_ENV=production ts-node --transpileOnly -r tsconfig-paths/register src/index.ts ",
     "start-test": "cross-env NODE_ENV=test ts-node --transpileOnly -r tsconfig-paths/register src/index.ts ",
     "start-dev": "ts-node-dev --respawn --transpileOnly --ignore-watch .spec -r tsconfig-paths/register src/index.ts",
     "startFile": "ts-node-dev --respawn --transpileOnly --ignore-watch .spec -r tsconfig-paths/register",
