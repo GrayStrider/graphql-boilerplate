@@ -8,7 +8,7 @@ module.exports = {
     "ts",
     "tsx",
     "js",
-    "jsx"
+    "jsx"f
   ],
 
   "testRegex": ".spec.ts$",
