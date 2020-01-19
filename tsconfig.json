@@ -12,7 +12,7 @@
     "lib": [
       "dom",
       "es6",
-      "es2017",
+      "es201d7",
       "esnext.asynciterable"
     ],
     "incremental": true,
