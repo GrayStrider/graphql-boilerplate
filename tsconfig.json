@@ -21,11 +21,11 @@
     // conflicts with typeorm
     "sourceMap": true,
     "outDir": "./dist",
-    "moduleResolution": "node",
+    "duleResolution": "node",
     //    "declaration": false,
     "composite": false,
     "removeComments": true,
-    "noImplicitAny": true,
+y": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "noImplicitThis": true,
