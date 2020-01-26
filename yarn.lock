@@ -859,6 +859,16 @@
     prisma-yml "1.34.10"
     tslib "1.10.0"
 
+"@graphql-toolkit/prisma-loader@0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@graphql-toolkit/prisma-loader/-/prisma-loader-0.9.1.tgz#f027f60d0cddbf1c4a8e3a4733655c93897ab95e"
+  integrity sha512-wHA8bPr9uDdJG1z4bB3DjzSLELGp8a8eLgAVJFIYjaSMIPJ42LBBbPoKL7o/zWZexV/GkOBNQKkQYigj/PyiVQ==
+  dependencies:
+    "@graphql-toolkit/common" "0.9.1"
+    "@graphql-toolkit/url-loader" "0.9.1"
+    prisma-yml "1.34.10"
+    tslib "1.10.0"
+
 "@graphql-toolkit/schema-merging@0.9.0":
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@graphql-toolkit/schema-merging/-/schema-merging-0.9.0.tgz#f4fb380e6be57e0235c25a77fc0aec842414c27e"
@@ -885,6 +895,16 @@
   integrity sha512-umz+V9KbFv4oCWjZWiiIIH2PQrdK7tPxs8vbLdNy+EvdQrFSV5lJSknfsusyAoJfOpH+W294Ugfs0ySH5jZDxw==
   dependencies:
     "@graphql-toolkit/common" "0.9.0"
+    cross-fetch "3.0.4"
+    tslib "1.10.0"
+    valid-url "1.0.9"
+
+"@graphql-toolkit/url-loader@0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@graphql-toolkit/url-loader/-/url-loader-0.9.1.tgz#11df8be5fd40dfe5e49deb39f3fef7dfe182e459"
+  integrity sha512-NnHFBHY+1kmaws4bLjcknmmRyY1WmzVUP/AIlV0CDMfRvZmrtuQXt2jrpP7AlW8BBBkVNmVYp+59m37GPKu+Gg==
+  dependencies:
+    "@graphql-toolkit/common" "0.9.1"
     cross-fetch "3.0.4"
     tslib "1.10.0"
     valid-url "1.0.9"
@@ -4138,10 +4158,10 @@ graphql-import@0.7.1:
     lodash "^4.17.4"
     resolve-from "^4.0.0"
 
-graphql-import@^1.0.0-beta.1:
-  version "1.0.0-fd0e74b.0"
-  resolved "https://registry.yarnpkg.com/graphql-import/-/graphql-import-1.0.0-fd0e74b.0.tgz#837ce2f46d8ff2885c1f1cfb759628445d6f7759"
-  integrity sha512-vNH1yALcO5bnHDK3XVz7vlHW8abWLfnrxlq4EkJjQdIcqWJicSmpFOLh4AxHm0NHh1t4pkV2M1GHo4OgM7sJeQ==
+graphql-import@^1.0.0-3891703.0:
+  version "1.0.0-3891703.0"
+  resolved "https://registry.yarnpkg.com/graphql-import/-/graphql-import-1.0.0-3891703.0.tgz#038e305e8054073571e1505938cdac88aecdb09f"
+  integrity sha512-jGxGJP00FJdUp1qjpX8pCSRJyWQIUbXa7gZZ8luPnA7EgjEa329XNPg3PLUYfHvQ9ttLYV3gKXHh7y8Qu5Vmjw==
   dependencies:
     "@graphql-toolkit/apollo-engine-loader" "0.9.1"
     "@graphql-toolkit/code-file-loader" "0.9.1"
@@ -4150,7 +4170,7 @@ graphql-import@^1.0.0-beta.1:
     "@graphql-toolkit/github-loader" "0.9.1"
     "@graphql-toolkit/graphql-file-loader" "0.9.0"
     "@graphql-toolkit/json-file-loader" "0.9.0"
-    "@graphql-toolkit/prisma-loader" "0.9.0"
+    "@graphql-toolkit/prisma-loader" "0.9.1"
     "@graphql-toolkit/url-loader" "0.9.0"
     lodash "4.17.15"
     resolve-from "5.0.0"
