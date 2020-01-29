@@ -1,19 +1,19 @@
 import {debounce} from 'lodash'
 import {MiddlewareFn} from 'type-graphql'
-import {sig} from '@/utils'
+import {signale} from '@/utils'
 import {Context} from '@/graphql'
 import DBRequestCounterService from '@/graphql/type-graphql/middleware/DBRequestCounter.service'
 
 
 const collect = debounce((count: number) => {
 	
-	if (count > 5) sig.warn(`Many queries: ${count}`)
+	if (count > 5) signale.warn(`Many queries: ${count}`)
 	DBRequestCounterService.connect().clearCount()
 	
 }, 200)
 
 const dbRequestCounter: MiddlewareFn<Context> =
-	async ({context, args, info, root}, next) => {
+	async ({args, root, info, context}, next) => {
 		
 		const res = await next()
 		const count = DBRequestCounterService.connect().getCount

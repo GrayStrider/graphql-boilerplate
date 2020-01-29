@@ -3,9 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - master
-      - playground
-      - KBF
+      - '*'
     tags-ignore:
       - dependencies
   pull_request:
@@ -35,7 +33,7 @@ jobs:
         env:
           POSTGRES_USER: test_runner
           POSTGRES_PASSWORD: testtest
-          POSTGRES_DB: typegraphql-example-test
+          POSTGRES_DB: graphql-boilerplate-test
         ports:
           - 5432:5432
         # needed because the postgres container does not provide a healthcheck
@@ -52,10 +50,7 @@ jobs:
       - name: install
         run: yarn install
       - name: start, generate schema and test with coverage
-        run: |
-          yarn start:test &
-          sleep 10s
-          yarn test:CI --token ${{ secrets.CODACY_PROJECT_TOKEN }}
+        run: yarn test:CI --token ${{ secrets.CODACY_PROJECT_TOKEN }}
 
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@master

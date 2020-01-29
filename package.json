@@ -72,11 +72,11 @@
     "uuid": "^3.4.0"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^1.11.2",
+    "@graphql-codegen/cli": "^1.12.0",
     "@graphql-codegen/introspection": "^1.12.0",
     "@graphql-codegen/typescript": "1.11.2",
-    "@graphql-codegen/typescript-document-nodes": "1.11.2",
-    "@graphql-codegen/typescript-resolvers": "1.11.2",
+    "@graphql-codegen/typescript-document-nodes": "1.12.0",
+    "@graphql-codegen/typescript-resolvers": "1.12.0",
     "@types/bcryptjs": "^2.4.2",
     "@types/bluebird": "^3.5.29",
     "@types/config": "^0.0.36",
@@ -90,10 +90,11 @@
     "@types/koa-router": "^7.4.0",
     "@types/koa-session": "^5.10.1",
     "@types/lodash": "^4.14.149",
-    "@types/node": "^13.1.8",
+    "@types/node": "^13.5.1",
     "@types/nodemailer": "^6.4.0",
     "@types/ramda": "^0.26.39",
     "@types/signale": "^1.2.1",
+    "@types/supertest": "^2.0.8",
     "@types/uuid": "^3.4.6",
     "@typescript-eslint/eslint-plugin": "^2.17.0",
     "@typescript-eslint/parser": "^2.16.0",
@@ -104,6 +105,7 @@
     "faker": "^4.1.0",
     "husky": "^4.0.10",
     "jest": "^24.9.0",
+    "supertest": "^4.0.2",
     "ts-jest": "^24.3.0",
     "ts-node-dev": "^1.0.0-pre.44",
     "tsdef": "^0.0.13"
@@ -113,31 +115,18 @@
     "tslint": "5.0.0"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production ts-node --transpile-only -r tsconfig-paths/register src/index.ts",
     "start:dev": "yarn start:dev:file src/index.ts",
+    "test:typecheck": "tsc --noEmit",
+    "start": "cross-env NODE_ENV=production ts-node --transpile-only -r tsconfig-paths/register src/index.ts",
     "start:dev:file": "ts-node-dev --respawn --transpile-only --ignore-watch .spec -r tsconfig-paths/register",
     "start:test": "cross-env NODE_ENV=test ts-node --transpile-only -r tsconfig-paths/register src/index.ts",
     "test": "yarn test:coverage && yarn lint:all:fix && yarn codegen && yarn test:typecheck",
     "test:CI": "yarn test && cat ./test/coverage/lcov.info | codacy-coverage",
-    "test:jest": "jest -c jest.config.js --forceExit --detectOpenHandles -w 3",
+    "test:jest": "jest --forceExit --detectOpenHandles --runInBand",
     "test:coverage": "yarn test:jest --coverage",
-    "test:typecheck": "tsc --noEmit",
     "lint:all": "eslint -c .eslintrc.style.yml . --ext .ts",
     "lint:all:fix": "yarn lint:all --fix",
     "lint:staged": "eslint -c .eslintrc.style.yml --fix",
     "codegen": "graphql-codegen"
-  },
-  "signale": {
-    "displayScope": true,
-    "displayBadge": false,
-    "displayDate": false,
-    "displayFilename": true,
-    "displayLabel": true,
-    "displayTimestamp": true,
-    "underlineLabel": true,
-    "underlineMessage": false,
-    "underlinePrefix": false,
-    "underlineSuffix": false,
-    "uppercaseLabel": false
   }
 }
