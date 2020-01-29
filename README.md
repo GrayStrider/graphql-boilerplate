@@ -2,6 +2,7 @@
 
 GraphQL boilerplate made with Koa, type-graphql and typeORM
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e401c93567d944bebeef3c1dae3c88b6)](https://app.codacy.com/manual/GrayStrider/graphql-boilerplate?utm_source=github.com&utm_medium=referral&utm_content=GrayStrider/graphql-boilerplate&utm_campaign=Badge_Grade_Dashboard)
 [![](https://github.com/GrayStrider/graphql-boilerplate-playground/workflows/CI/badge.svg)](https://github.com/GrayStrider/graphql-boilerplate-playground/actions)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3365aa557313481ea575b71f24cd5a83)](https://app.codacy.com/manual/GrayStrider/graphql-boilerplate-playground?utm_source=github.com&utm_medium=referral&utm_content=GrayStrider/graphql-boilerplate-playground&utm_campaign=Badge_Grade_Dashboard)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/a75208ca5d1f41f8b3dd18a57fe9900a)](https://www.codacy.com/manual/GrayStrider/graphql-boilerplate?utm_source=github.com&utm_medium=referral&utm_content=GrayStrider/graphql-boilerplate&utm_campaign=Badge_Coverage)
