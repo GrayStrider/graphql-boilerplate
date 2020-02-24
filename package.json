@@ -97,7 +97,7 @@
     "@types/config": "^0.0.36",
     "@types/ioredis": "^4.14.7",
     "@types/jest": "^25.1.1",
-    "@types/koa": "^2.11.0",
+    "@types/koa": "^2.11.1",
     "@types/koa-bodyparser": "^4.3.0",
     "@types/koa-helmet": "^3.1.2",
     "@types/koa-redis": "^4.0.0",
